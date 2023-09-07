@@ -35,7 +35,7 @@ float ReadNumF(const char* prompt)
     Write(prompt);
 
     float out;
-    scanf("%d", &out);
+    scanf("%f", &out);
 
     return out;
 }
@@ -48,7 +48,7 @@ double ReadNumD(const char* prompt)
     Write(prompt);
 
     double out;
-    scanf("%d", &out);
+    scanf("%lf", &out);
 
     return out;
 }

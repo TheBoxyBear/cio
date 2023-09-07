@@ -48,7 +48,7 @@ char* i_to_string(int n)
 char* f_to_string(float n)
 {
     char* out = malloc(20);
-    sprintf(out, "%d", n);
+    sprintf(out, "%f", n);
 
     return out;
 }
