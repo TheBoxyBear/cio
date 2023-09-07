@@ -39,3 +39,16 @@ float ReadNumF(const char* prompt)
 
     return out;
 }
+
+/// @brief Reads a double from the user.
+/// @param prompt Text to display before the input.
+/// @return 
+double ReadNumD(const char* prompt)
+{
+    Write(prompt);
+
+    double out;
+    scanf("%d", &out);
+
+    return out;
+}
