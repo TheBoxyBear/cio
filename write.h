@@ -1,5 +1,7 @@
 #include <stddef.h>
 
+void WriteBlank(void)
+
 void WriteC(char c);
 void WriteCLine(char c);
 

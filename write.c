@@ -3,6 +3,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+/// @brief Adds an empty line to the standard output.
+void WriteBlank(void)
+{
+    fwrite("\n", sizeof(char), 1, stdout);
+}
+
 /// @brief Outputs a single character.
 /// @param c 
 void WriteC(char c)
@@ -14,7 +20,7 @@ void WriteC(char c)
 void WriteCLine(char c)
 {
     fwrite(&c, sizeof(char), 1, stdout);
-    fwrite("\n", sizeof(char), 1, stdout);
+    WriteBlank();
 }
 
 /// @brief Outputs a string of indetermite length.
