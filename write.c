@@ -12,7 +12,7 @@ void WriteC(char c)
 /// @param c 
 void WriteCLine(char c)
 {
-    fwrite(c, sizeof(char), 1, stdout);
+    fwrite(&c, sizeof(char), 1, stdout);
     fwrite("\n", sizeof(char), 1, stdout);
 }
 
