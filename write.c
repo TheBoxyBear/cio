@@ -6,7 +6,7 @@
 /// @param c 
 void WriteC(char c)
 {
-    fwrite(c, sizeof(char), 1, stdout);
+    fwrite(&c, sizeof(char), 1, stdout);
 }
 /// @brief Outputs a single character on a new line.
 /// @param c 
