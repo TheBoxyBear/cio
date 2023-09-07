@@ -1,3 +1,4 @@
+#include "write.h"
 #include <stdio.h>
 
 /// @brief Reads a character from the user.
@@ -5,6 +6,8 @@
 /// @return 
 char ReadChar(const char* prompt)
 {
+    Write(prompt);
+
     char out;
     scanf("%c", &out);
 
@@ -16,6 +19,8 @@ char ReadChar(const char* prompt)
 /// @return 
 int ReadNum(const char* prompt)
 {
+    Write(prompt);
+
     int out;
     scanf("%d", &out);
 
@@ -27,6 +32,8 @@ int ReadNum(const char* prompt)
 /// @return 
 float ReadNumF(const char* prompt)
 {
+    Write(prompt);
+
     float out;
     scanf("%d", &out);
 
