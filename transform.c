@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 
 /// @brief Converts an integer to a string.
 /// @param n 
@@ -19,6 +21,16 @@ char* f_to_string(float n)
     sprintf(out, "%f", n);
 
     return out;
+}
+
+/// @brief Converts a stirng to a base 10 integer.
+/// @param str 
+/// @return 
+int string_to_i(const char* str)
+{
+    char* out;
+
+    return strtol(str, &out, 10);
 }
 
 /// @brief Reverses a string.
