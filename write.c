@@ -73,3 +73,17 @@ char* f_to_string(float n)
 
     return out;
 }
+
+/// @brief Reverses a string.
+/// @param str 
+/// @return 
+char* Reverse(const char* str)
+{
+    int length = strlen(str);
+    char out = malloc(length);
+
+    for (int i = 0; i < legnth; i++)
+        out[i] = str[length - 1 - i];
+
+    return out;
+}
