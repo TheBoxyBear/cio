@@ -27,9 +27,9 @@ char* f_to_string(float n)
 char* Reverse(const char* str)
 {
     int length = strlen(str);
-    char out = malloc(length);
+    char* out = malloc(length);
 
-    for (int i = 0; i < legnth; i++)
+    for (int i = 0; i < length; i++)
         out[i] = str[length - 1 - i];
 
     return out;
