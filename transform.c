@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <bool.h>
 
 /// @brief Converts an integer to a string.
 /// @param n 
@@ -45,4 +46,48 @@ char* Reverse(const char* str)
         out[i] = str[length - 1 - i];
 
     return out;
+}
+
+/// @brief Swaps the values in two pointers.
+/// @param a 
+/// @param b 
+void Swap(void* a, void* b)
+{
+    void* tmp = a;
+    a = b;
+    b = tmp;
+}
+/// @brief Swaps the values in two pointers by deferencing the first value.
+/// @param a 
+/// @param b 
+void SwapRef(void* a, void* b)
+{
+    void tmp = *a;
+
+    *a = *b;
+    *b = tmp;
+}
+
+/// @brief Sorts an array of bytes.
+/// @param arr 
+/// @param len 
+void Sort(char[] arr, int len)
+{
+    bool swap = false;
+
+    do
+    {
+        for (int i = 1; i < len; i++)
+        {
+            swap = false;
+
+            char* left = &arr[i - 1], current = & arr[i];
+
+            if (*left > *current)
+            {
+                SwapRef(left, current);
+                swap = true;
+            }
+        }
+    } while (swap);
 }
