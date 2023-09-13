@@ -3,7 +3,7 @@
 
 /// @brief Reads a character from the user.
 /// @param prompt Text to display before the input.
-/// @return 
+/// @return
 char ReadChar(const char* prompt)
 {
     Write(prompt);
@@ -16,7 +16,7 @@ char ReadChar(const char* prompt)
 
 /// @brief Reads an integer from the user.
 /// @param prompt Text to display before the input.
-/// @return 
+/// @return
 int ReadNum(const char* prompt)
 {
     Write(prompt);
@@ -29,7 +29,7 @@ int ReadNum(const char* prompt)
 
 /// @brief Reads a float from the user.
 /// @param prompt Text to display before the input.
-/// @return 
+/// @return
 float ReadNumF(const char* prompt)
 {
     Write(prompt);
@@ -42,7 +42,7 @@ float ReadNumF(const char* prompt)
 
 /// @brief Reads a double from the user.
 /// @param prompt Text to display before the input.
-/// @return 
+/// @return
 double ReadNumD(const char* prompt)
 {
     Write(prompt);

@@ -70,6 +70,7 @@ void Sort(char arr[], int len)
     bool swap = false;
 
     do
+    {
         for (int i = 1; i < len; i++)
         {
             swap = false;
@@ -86,5 +87,8 @@ void Sort(char arr[], int len)
                 swap = true;
             }
         }
+
+        len--;
+    }
     while (swap);
 }
