@@ -1,5 +1,8 @@
 #include <stdbool.h>
 
+bool MaxCon(int, int);
+bool MinCon(int, int);
+
 /// @brief Return the maximum value from an array of integers.
 /// @param nums 
 /// @param len 

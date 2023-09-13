@@ -9,7 +9,7 @@ char ReadChar(const char* prompt)
     Write(prompt);
 
     char out;
-    scanf("%c", &out);
+    scanf_s("%c", &out);
 
     return out;
 }
@@ -22,7 +22,7 @@ int ReadNum(const char* prompt)
     Write(prompt);
 
     int out;
-    scanf("%d", &out);
+    scanf_s("%d", &out);
 
     return out;
 }
@@ -35,7 +35,7 @@ float ReadNumF(const char* prompt)
     Write(prompt);
 
     float out;
-    scanf("%f", &out);
+    scanf_s("%f", &out);
 
     return out;
 }
@@ -48,7 +48,7 @@ double ReadNumD(const char* prompt)
     Write(prompt);
 
     double out;
-    scanf("%lf", &out);
+    scanf_s("%lf", &out);
 
     return out;
 }

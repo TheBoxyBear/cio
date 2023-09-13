@@ -1,14 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <bool.h>
+#include <stdbool.h>
 
 /// @brief Converts an integer to a string.
 /// @param n 
 /// @return 
 char* i_to_string(int n)
 {
-    char* out = malloc(20);
-    sprintf(out, "%d", n);
+    const size_t size = 20;
+
+    char* out = malloc(size);
+    sprintf_s(out, size, "%d", n);
 
     return out;
 }
@@ -18,8 +20,10 @@ char* i_to_string(int n)
 /// @return 
 char* f_to_string(float n)
 {
-    char* out = malloc(20);
-    sprintf(out, "%f", n);
+    const size_t size = 20;
+
+    char* out = malloc(size);
+    sprintf_s(out, size, "%f", n);
 
     return out;
 }
@@ -62,26 +66,26 @@ void Swap(void* a, void* b)
 /// @param b 
 void SwapRef(void* a, void* b)
 {
-    void tmp = *a;
+    //void* tmp = *a;
 
-    *a = *b;
-    *b = tmp;
+    //*a = *b;
+    //*b = tmp;
 }
 
 /// @brief Sorts an array of bytes.
 /// @param arr 
 /// @param len 
-void Sort(char[] arr, int len)
+void Sort(char* arr, int len)
 {
     bool swap = false;
 
     do
-    {
         for (int i = 1; i < len; i++)
         {
             swap = false;
 
-            char* left = &arr[i - 1], current = & arr[i];
+            char* left = &arr[i - 1];
+            char* current = &arr[i];
 
             if (*left > *current)
             {
@@ -89,5 +93,5 @@ void Sort(char[] arr, int len)
                 swap = true;
             }
         }
-    } while (swap);
+    while (swap);
 }
