@@ -8,7 +8,7 @@ bool MinCon(int, int);
 /// @param len 
 /// @param target 
 /// @return 
-int Max(int nums[], int len, int target)
+int Max(int nums[], int len)
 {
     return MinMax(nums, len, target, MaxCon);
 }
@@ -22,7 +22,7 @@ bool MaxCon(int n, int target)
 /// @param len 
 /// @param target 
 /// @return 
-int Min(int nums[], int len, int target)
+int Min(int nums[], int len)
 {
     return MinMax(nums, len, target, MinCon);
 }
@@ -31,12 +31,12 @@ bool MinCon(int n, int target)
     return n < target;
 }
 
-int MinMax(int nums[], int len, int target, bool *con(int, int))
+int MinMax(int nums[], int len, bool *con(int, int))
 {
     int out = nums[0];
 
     for (int i = 1; i < len; i++)
-        if (con(nums[i], target))
+        if (con(nums[i], out))
             out = nums[i];
 
     return out;
