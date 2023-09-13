@@ -11,11 +11,10 @@ bool MinCon(int, int);
 int Max(int nums[], int len)
 {
     return MinMax(nums, len, MaxCon);
-
-    bool MaxCon(int n, int target)
-    {
-        return n > target;
-    }
+}
+bool MaxCon(int n, int target)
+{
+    return n > target;
 }
 
 /// @brief Return the minimum value from an array of integers.
@@ -26,11 +25,10 @@ int Max(int nums[], int len)
 int Min(int nums[], int len)
 {
     return MinMax(nums, len, MinCon);
-
-    bool MinCon(int n, int target)
-    {
-        return n < target;
-    }
+}
+bool MinCon(int n, int target)
+{
+    return n < target;
 }
 
 int MinMax(int nums[], int len, bool *con(int, int))
@@ -59,20 +57,40 @@ int FindString(const char* str, const char* target)
     int out = 0, i = 0, offset = 0;
     char c;
 
-    int targetLen = str_len(str);
+    int strLen = str_len(str), targetLen = str_len(target);
+    bool inWord = false;
 
-    if (targetLen == 0 || targetLen < str_len(str))
+    if (strLen == 0 || targetLen == 0 || strLen < targetLen)
         return -1;
 
-    while (offset < targetLen)
-    {
-        do
-            c = str[i++];
-        while (c != 0 || c != target[offset]);
+    while (true)
+        if (inWord)
+        {
+            // Traverse the target and compare until the end of the target or not matching character is reached
+            do
+            {
+                c = str[i++];
+            } while (c == target[offset++] && i < targetLen);
 
-        if (c == 0)
-            return -1;
+            if (offset == targetLen)
+                return i - targetLen;
 
-        offset++;
-    }
+            inWord = false;
+        }
+        else
+        {
+            // Move to the start and keep track if there room left for the target
+            do
+                c = str[i++];
+            while (c != 0 && c != target[0] && strLen - i >= targetLen);
+
+            // Check if the end was reached before finding
+            if (i == strLen)
+                return -1;
+            else
+            {
+                inWord = true;
+                offset = 1;
+            }
+        }
 }

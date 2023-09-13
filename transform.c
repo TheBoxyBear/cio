@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include "analyze.h"
 
 /// @brief Converts an integer to a string.
 /// @param n
@@ -43,7 +44,7 @@ int string_to_i(const char* str)
 /// @return
 char* Reverse(const char* str)
 {
-    int length = strlen(str);
+    int length = str_len(str);
     char* out = malloc(length);
 
     for (int i = 0; i < length; i++)
