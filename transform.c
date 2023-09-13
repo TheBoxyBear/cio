@@ -3,8 +3,8 @@
 #include <stdbool.h>
 
 /// @brief Converts an integer to a string.
-/// @param n 
-/// @return 
+/// @param n
+/// @return
 char* i_to_string(int n)
 {
     const size_t size = 20;
@@ -16,8 +16,8 @@ char* i_to_string(int n)
 }
 
 /// @brief Converts a float to a string.
-/// @param n 
-/// @return 
+/// @param n
+/// @return
 char* f_to_string(float n)
 {
     const size_t size = 20;
@@ -29,8 +29,8 @@ char* f_to_string(float n)
 }
 
 /// @brief Converts a stirng to a base 10 integer.
-/// @param str 
-/// @return 
+/// @param str
+/// @return
 int string_to_i(const char* str)
 {
     char* out;
@@ -39,8 +39,8 @@ int string_to_i(const char* str)
 }
 
 /// @brief Reverses a string.
-/// @param str 
-/// @return 
+/// @param str
+/// @return
 char* Reverse(const char* str)
 {
     int length = strlen(str);
@@ -53,8 +53,8 @@ char* Reverse(const char* str)
 }
 
 /// @brief Swaps the values in two pointers.
-/// @param a 
-/// @param b 
+/// @param a
+/// @param b
 void Swap(void* a, void* b)
 {
     void* tmp = a;
@@ -63,8 +63,8 @@ void Swap(void* a, void* b)
 }
 
 /// @brief Sorts an array of bytes.
-/// @param arr 
-/// @param len 
+/// @param arr
+/// @param len
 void Sort(char arr[], int len)
 {
     bool swap = false;

@@ -4,10 +4,10 @@ bool MaxCon(int, int);
 bool MinCon(int, int);
 
 /// @brief Return the maximum value from an array of integers.
-/// @param nums 
-/// @param len 
-/// @param target 
-/// @return 
+/// @param nums
+/// @param len
+/// @param target
+/// @return
 int Max(int nums[], int len)
 {
     return MinMax(nums, len, MaxCon);
@@ -18,10 +18,10 @@ bool MaxCon(int n, int target)
 }
 
 /// @brief Return the minimum value from an array of integers.
-/// @param nums 
-/// @param len 
-/// @param target 
-/// @return 
+/// @param nums
+/// @param len
+/// @param target
+/// @return
 int Min(int nums[], int len)
 {
     return MinMax(nums, len, MinCon);
@@ -40,4 +40,14 @@ int MinMax(int nums[], int len, bool *con(int, int))
             out = nums[i];
 
     return out;
+}
+
+int str_len(const char* str)
+{
+    int len = 0, i = 0;
+
+    while (str[i++] != 0)
+        len++;
+
+    return len;
 }
