@@ -10,7 +10,7 @@ bool MinCon(int, int);
 /// @return 
 int Max(int nums[], int len)
 {
-    return MinMax(nums, len, target, MaxCon);
+    return MinMax(nums, len, MaxCon);
 }
 bool MaxCon(int n, int target)
 {
@@ -24,7 +24,7 @@ bool MaxCon(int n, int target)
 /// @return 
 int Min(int nums[], int len)
 {
-    return MinMax(nums, len, target, MinCon);
+    return MinMax(nums, len, MinCon);
 }
 bool MinCon(int n, int target)
 {
