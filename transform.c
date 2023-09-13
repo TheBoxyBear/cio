@@ -93,3 +93,17 @@ void Sort(char arr[], int len)
     }
     while (swap);
 }
+
+void Resize(char* str, int len, int newLen)
+{
+    if (len < 0)
+        len = str_len(str);
+
+    char* tmp = malloc(len + 1);
+    strcpy(tmp, str);
+
+    free(str);
+    str = malloc(newLen + 1);
+    strcpy(str, tmp);
+    free(tmp);
+}
