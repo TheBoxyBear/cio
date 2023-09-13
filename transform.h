@@ -6,6 +6,5 @@ int string_to_i(const char*);
 char* Reverse(const char*);
 
 void Swap(void*, void*);
-void SwapRef(void*, void*);
 
 void Sort(char[], int);

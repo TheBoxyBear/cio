@@ -61,21 +61,11 @@ void Swap(void* a, void* b)
     a = b;
     b = tmp;
 }
-/// @brief Swaps the values in two pointers by deferencing the first value.
-/// @param a 
-/// @param b 
-void SwapRef(void* a, void* b)
-{
-    //void* tmp = *a;
-
-    //*a = *b;
-    //*b = tmp;
-}
 
 /// @brief Sorts an array of bytes.
 /// @param arr 
 /// @param len 
-void Sort(char* arr, int len)
+void Sort(char arr[], int len)
 {
     bool swap = false;
 
@@ -89,7 +79,10 @@ void Sort(char* arr, int len)
 
             if (*left > *current)
             {
-                SwapRef(left, current);
+                char tmp = *left;
+                *left = *current;
+                *current = tmp;
+
                 swap = true;
             }
         }
