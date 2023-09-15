@@ -72,6 +72,8 @@ char* Reverse(const char* str)
 /// @param b
 void Swap(void* a, void* b)
 {
+    *a = *b;
+
     void* tmp = a;
     a = b;
     b = tmp;

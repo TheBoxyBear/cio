@@ -10,13 +10,13 @@ void WriteBlank(void)
 }
 
 /// @brief Outputs a single character.
-/// @param c 
+/// @param c
 void WriteC(char c)
 {
     fwrite(&c, sizeof(char), 1, stdout);
 }
 /// @brief Outputs a single character on a new line.
-/// @param c 
+/// @param c
 void WriteCLine(char c)
 {
     fwrite(&c, sizeof(char), 1, stdout);
