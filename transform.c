@@ -95,10 +95,7 @@ void Sort(char arr[], int len)
 
             if (*left > *current)
             {
-                char tmp = *left;
-                *left = *current;
-                *current = tmp;
-
+                Swap(left, current);
                 swap = true;
             }
         }
