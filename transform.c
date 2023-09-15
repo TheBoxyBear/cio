@@ -67,6 +67,16 @@ char* Reverse(const char* str)
     return out;
 }
 
+/// @brief Swaps the values in two pointers.
+/// @param a
+/// @param b
+void Swap(char* a, char* b)
+{
+    char* tmp = a;
+    *a = *b;
+    *b = *tmp;
+}
+
 /// @brief Sorts an array of bytes.
 /// @param arr
 /// @param len

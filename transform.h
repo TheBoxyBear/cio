@@ -5,6 +5,8 @@ int string_to_i(const char*);
 
 char* Reverse(const char*);
 
+void Swap(char*, char*);
+
 void Sort(char[], int);
 
 void Resize(char*, int, int);
