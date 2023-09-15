@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 #include "analyze.h"
 
 /// @brief Converts an integer to a string.
@@ -11,6 +12,10 @@ char* i_to_string(int n)
     const size_t size = 20;
 
     char* out = malloc(size);
+
+    if (out == NULL)
+        return NULL;
+
     sprintf_s(out, size, "%d", n);
 
     return out;
@@ -24,6 +29,10 @@ char* f_to_string(float n)
     const size_t size = 20;
 
     char* out = malloc(size);
+
+    if (out == NULL)
+        return NULL;
+
     sprintf_s(out, size, "%f", n);
 
     return out;
@@ -47,8 +56,13 @@ char* Reverse(const char* str)
     int length = str_len(str);
     char* out = malloc(length);
 
+    if (out == NULL)
+        return NULL;
+
     for (int i = 0; i < length; i++)
         out[i] = str[length - 1 - i];
+
+    out[length] = 0;
 
     return out;
 }
@@ -100,10 +114,14 @@ void Resize(char* str, int len, int newLen)
         len = str_len(str);
 
     char* tmp = malloc(len + 1);
-    strcpy(tmp, str);
+
+    if (tmp == NULL)
+        return;
+
+    strcpy_s(tmp, len + 1, str);
 
     free(str);
     str = malloc(newLen + 1);
-    strcpy(str, tmp);
+    strcpy_s(str, newLen + 1, tmp);
     free(tmp);
 }
