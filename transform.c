@@ -109,7 +109,7 @@ void Sort(char arr[], int len)
     while (swap);
 }
 
-void Resize(char* str, int len, int newLen)
+void Resize(char** str, int len, int newLen)
 {
     if (len < 0)
         len = str_len(str);
