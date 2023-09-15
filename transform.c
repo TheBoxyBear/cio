@@ -72,9 +72,9 @@ char* Reverse(const char* str)
 /// @param b
 void Swap(char* a, char* b)
 {
-    char* tmp = a;
+    char tmp = *a;
     *a = *b;
-    *b = *tmp;
+    *b = tmp;
 }
 
 /// @brief Sorts an array of bytes.
@@ -95,6 +95,10 @@ void Sort(char arr[], int len)
 
             if (*left > *current)
             {
+                //char tmp = arr[i - 1];
+                //arr[i - 1] = arr[i];
+                //arr[i] = tmp;
+
                 Swap(left, current);
                 swap = true;
             }
